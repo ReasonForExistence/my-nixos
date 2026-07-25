@@ -12,6 +12,7 @@
     ../../modules/system/user.nix
     ../../modules/system/graphics.nix
     ../../modules/system/flatpak.nix
+    ../../modules/system/storage.nix
     ./hardware-configuration.nix
   ];
 
