@@ -12,6 +12,7 @@
     ./fish.nix
     ./i3
     ./kitty
+    ./nvim.nix
     ./packages.nix
     ./picom
     ./rofi
