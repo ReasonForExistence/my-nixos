@@ -8,11 +8,11 @@
 (defwindow music_win_eDP-1
   :monitor "eDP-1"
   :windowtype "dialog"
-  :geometry (geometry :x "0px"
-                      :y "60px"
+  :geometry (geometry :x "320px"
+                      :y "36px"
                       :width "400px"
                       :height "140px"
-                      :anchor "top center")
+                      :anchor "top right")
   :wm-ignore true
   (music_layout))
 
@@ -30,11 +30,11 @@
 (defwindow music_win_HDMI-1
   :monitor "HDMI-1"
   :windowtype "dialog"
-  :geometry (geometry :x "0px"
-                      :y "60px"
+  :geometry (geometry :x "320px"
+                      :y "36px"
                       :width "400px"
                       :height "140px"
-                      :anchor "top center")
+                      :anchor "top right")
   :wm-ignore true
   (music_layout))
 

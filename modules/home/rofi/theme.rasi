@@ -9,20 +9,19 @@
 }
 
 window {
-    width: 480px;
-    padding: 20px;
+    width: 520px;
+    padding: 24px;
     background-color: @bg;
-    border-radius: 16px;
-    border: 2px;
-    border-color: @accent;
+    border-radius: 24px;
+    border: 0px;
 }
 
 inputbar {
     children: [prompt, entry];
-    margin: 0 0 12px 0;
-    padding: 8px 12px;
+    margin: 0 0 16px 0;
+    padding: 12px 16px;
     background-color: @bg-alt;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 prompt {
@@ -44,8 +43,8 @@ listview {
 }
 
 element {
-    padding: 10px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 12px;
     margin: 2px 0;
 }
 

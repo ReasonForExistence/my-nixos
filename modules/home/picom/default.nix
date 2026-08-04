@@ -6,20 +6,20 @@
     backend = "glx";
     vSync = true;
 
-    activeOpacity = 0.90;
-    inactiveOpacity = 0.75;
+    activeOpacity = 1.0;
+    inactiveOpacity = 0.90;
 
     fade = true;
-    fadeDelta = 10;
+    fadeDelta = 4;
     fadeSteps = [
-      0.03
-      0.03
+      0.02
+      0.02
     ];
 
     shadow = true;
     shadowOffsets = [
-      (-7)
-      (-7)
+      (-15)
+      (-15)
     ];
     shadowExclude = [
       "name = 'Notification'"
@@ -40,7 +40,9 @@
 
     settings = {
       unredir-if-possible = true;
-      corner-radius = 7;
+      corner-radius = 12;
+      shadow-radius = 15;
+      shadow-opacity = 0.5;
 
       rounded-corners-exclude = [
         "window_type = 'dock'"
@@ -60,6 +62,19 @@
         "_NET_WM_STATE@:32a *= '_NET_WM_STATE_FULLSCREEN'"
         "window_type = 'fullscreen'"
       ];
+
+      # Animations
+      animations = true;
+      animation-stiffness = 200.0;
+      animation-dampening = 22.0;
+      animation-clamping = true;
+      animation-mass = 1;
+      animation-for-open-window = "zoom";
+      animation-for-unmap-window = "squeeze";
+      animation-for-menu-window = "slide-down";
+      animation-for-transient-window = "slide-down";
+      animation-for-workspace-switch-in = "zoom";
+      animation-for-workspace-switch-out = "zoom";
     };
   };
 }

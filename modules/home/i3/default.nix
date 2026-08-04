@@ -15,22 +15,51 @@
 
   xsession.windowManager.i3 = {
     enable = true;
-    extraConfig = ''
-      for_window [class="^.*"] border pixel 0
-    '';
+    extraConfig = '''';
     config = {
       modifier = "Mod4";
       fonts = {
-        names = [ "monospace" ];
-        size = 8.0;
+        names = [ "JetBrainsMono Nerd Font" ];
+        size = 10.0;
       };
       gaps = {
-        inner = 8;
-        outer = 2;
+        inner = 10;
+        outer = 5;
       };
       window = {
-        border = 0;
+        border = 2;
         titlebar = false;
+      };
+
+      colors = {
+        focused = {
+          border = "#89b4fa";
+          background = "#89b4fa";
+          text = "#1e1e2e";
+          indicator = "#89b4fa";
+          childBorder = "#89b4fa";
+        };
+        focusedInactive = {
+          border = "#313244";
+          background = "#313244";
+          text = "#cdd6f4";
+          indicator = "#313244";
+          childBorder = "#313244";
+        };
+        unfocused = {
+          border = "#1e1e2e";
+          background = "#1e1e2e";
+          text = "#cdd6f4";
+          indicator = "#1e1e2e";
+          childBorder = "#1e1e2e";
+        };
+        urgent = {
+          border = "#f38ba8";
+          background = "#f38ba8";
+          text = "#1e1e2e";
+          indicator = "#f38ba8";
+          childBorder = "#f38ba8";
+        };
       };
 
       startup = [
@@ -62,9 +91,23 @@
           "Escape" = "exec eww close-all, mode \"default\"";
           "Return" = "mode \"default\"";
         };
+        resize = {
+          "h" = "resize shrink width 10 px or 10 ppt";
+          "j" = "resize grow height 10 px or 10 ppt";
+          "k" = "resize shrink height 10 px or 10 ppt";
+          "l" = "resize grow width 10 px or 10 ppt";
+          "Left" = "resize shrink width 10 px or 10 ppt";
+          "Down" = "resize grow height 10 px or 10 ppt";
+          "Up" = "resize shrink height 10 px or 10 ppt";
+          "Right" = "resize grow width 10 px or 10 ppt";
+          "Escape" = "mode \"default\"";
+          "Return" = "mode \"default\"";
+        };
       };
 
       keybindings = lib.mkOptionDefault {
+        "Mod4+r" = "mode \"resize\"";
+        "Mod4+Shift+r" = "restart";
         "Mod4+Return" = "exec kitty";
         "Mod4+a" = "exec rofi -show drun";
         "Mod4+e" = "exec thunar";
@@ -82,6 +125,15 @@
         "Mod4+Escape" = "exec ~/.config/eww/scripts/toggle_widget.sh power, mode \"power_menu\"";
         "Mod4+Shift+v" =
           "exec rofi -modi \"clipboard:greenclip print\" -show clipboard -run-command '{cmd}'";
+
+        "Mod4+s" = "layout stacking";
+        "Mod4+g" = "layout tabbed";
+        "Mod4+d" = "layout toggle split";
+        "Mod4+b" = "split h";
+        "Mod4+v" = "split v";
+
+        "Mod4+minus" = "scratchpad show";
+        "Mod4+Shift+minus" = "move scratchpad";
 
         "Mod4+h" = "focus left";
         "Mod4+j" = "focus down";

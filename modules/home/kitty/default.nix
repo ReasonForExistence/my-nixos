@@ -9,7 +9,8 @@
     };
     themeFile = "Catppuccin-Mocha";
     settings = {
-      window_padding_width = 15;
+      window_padding_width = 16;
+      background_opacity = "0.85";
 
       cursor_shape = "block";
       cursor_blink_interval = "0.5";
